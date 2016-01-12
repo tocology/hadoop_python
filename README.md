@@ -1,5 +1,5 @@
 # hadoop_python
-This repository for udemy lecture; Taming Big Data with MapReduce and Hadoop
+This project for udemy lecture; Taming Big Data with MapReduce and Hadoop
 
 ## Development
 ### Preparation
@@ -14,7 +14,7 @@ Basically, all data have been placed respectively in '/data' directory before ex
 
 * [Movielens](http://grouplens.org/datasets/movielens/ "Movielens")
 
-In this repository, we use ml-100k
+In this project, we use ml-100k
 
 ```console
 > wget http://files.grouplens.org/datasets/movielens/ml-100k.zip
