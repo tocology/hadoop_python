@@ -20,11 +20,15 @@ In this project, we use ml-100k
 > wget http://files.grouplens.org/datasets/movielens/ml-100k.zip
 ```
 
+* Fake Friends data
+
+> /data/fakefriends.csv
+
+
 ### Run
 * Rating Counter of ml-100k data
 ```console
 > python app/RatingCounter.py data/ml-100k/u.data
 ```
 
-
-
+* Average Friends by Age with Fake Friends data
