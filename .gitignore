@@ -1,2 +1,5 @@
 # DS_store (mac only)
 **/*.DS_store
+
+# Execution Result (dist)
+dist/
