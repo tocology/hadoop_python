@@ -1,6 +1,6 @@
 from mrjob.job import MRJob
 
-class MRCustomerOrderAmount(MRJob):
+class SpendByCustomer(MRJob):
 
     def mapper(self, _, line):
         (customer, itme, orderAmount) = line.split(',')
@@ -10,4 +10,4 @@ class MRCustomerOrderAmount(MRJob):
         yield customer, sum(orders)
 
 if __name__ == '__main__':
-    MRCustomerOrderAmount.run()
+    SpendByCustomer.run()
