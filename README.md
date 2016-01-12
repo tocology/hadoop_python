@@ -19,7 +19,7 @@ wget http://files.grouplens.org/datasets/movielens/ml-100k.zip
 ```
 
 ### Test
-* Rating Count of ml-100k data
+* Rating Counter of ml-100k data
 ```console
 cd app
 python RatingCounter.py ../data/ml-100k/u.data
