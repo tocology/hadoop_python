@@ -32,6 +32,10 @@ In this project, we use ml-100k
 
 > /data/1800.csv
 
+* Book data
+
+> /data/book.txt
+
 
 ### Run
 * Rating Counter with ml-100k data
@@ -55,4 +59,9 @@ Get minimum temperature by location
 Get maximum temperature by location
 ```console
 > python app/MaxTemperatures.py data/1800.csv > dist/maxtemps.txt
+```
+
+* Word Frequency (However, it still make some errors)
+```console
+> python app/WordFrequency.py data/Book.txt > dist/wordcount.txt
 ```
