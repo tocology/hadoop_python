@@ -86,3 +86,8 @@ Using chaining step method, results are sorted by the values(frequencies)
 ```console
 > python app/CustomerOrderAmount.py data/customer-orders.csv > dist/customerorders.txt
 ```
+
+Implemented with sort
+```console
+> python app/CustomerOrderAmountSorted.py data/customer-orders.csv > dist/customerorderssorted.txt
+```
