@@ -28,9 +28,13 @@ In this project, we use ml-100k
 
 > /data/fakefriends.csv
 
+* Weather data from the year 1800
+
+> /data/1800.csv
+
 
 ### Run
-* Rating Counter of ml-100k data
+* Rating Counter with ml-100k data
 ```console
 > python app/RatingCounter.py data/ml-100k/u.data
 ```
@@ -39,4 +43,16 @@ In this project, we use ml-100k
 ```console
 > python app/FriendsByAge.py data/fakefriends.csv
 > python app/FriendsByAge.py data/fakefriends.csv > dist/friendsbyage.txt
+```
+
+* Finding Temperature Extremes
+
+Get minimum temperature by location
+```console
+> python app/MinTemperatures.py data/1800.csv > dist/mintemps.txt
+```
+
+Get maximum temperature by location
+```console
+> python app/MaxTemperatures.py data/1800.csv > dist/maxtemps.txt
 ```
