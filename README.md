@@ -36,3 +36,7 @@ In this project, we use ml-100k
 ```
 
 * Average Friends by Age with Fake Friends data
+```console
+> python app/FriendsByAge.py data/fakefriends.csv
+> python app/FriendsByAge.py data/fakefriends.csv > dist/friendsbyage.txt
+```
