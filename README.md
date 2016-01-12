@@ -61,7 +61,13 @@ Get maximum temperature by location
 > python app/MaxTemperatures.py data/1800.csv > dist/maxtemps.txt
 ```
 
-* Word Frequency (However, it still make some errors)
+* Word Frequency
+
+However, it still make some errors
 ```console
 > python app/WordFrequency.py data/Book.txt > dist/wordcount.txt
+```
+Better version
+```console
+> python app/WordFrequencyBetter.py data/Book.txt > dist/wordcount.txt
 ```
