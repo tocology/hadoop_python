@@ -67,7 +67,13 @@ However, it still make some errors
 ```console
 > python app/WordFrequency.py data/Book.txt > dist/wordcount.txt
 ```
-Better version
+
+Better version, but the order of results is weird
 ```console
 > python app/WordFrequencyBetter.py data/Book.txt > dist/wordcountbetter.txt
+```
+
+Using chaining step method, results are sorted by the values(frequencies)
+```console
+> python app/WordFrequencySorted.py data/Book.txt > dist/wordcountsorted.txt
 ```
