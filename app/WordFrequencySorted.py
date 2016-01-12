@@ -14,13 +14,20 @@ class MRWordFrequencyCount(MRJob):
                    reducer=self.reducer_output_words)
         ]
 
-    def mapper(self, _, line):
+    def mapper_get_words(self, _, line):
         words = WORD_REGEXP.findall(line)
         for word in words:
             yield word.lower(), 1
 
-    def reducer(self, key, values):
+    def reducer_count_words(self, key, values):
         yield key, sum(values)
+
+    def mapper_make_counts_key(self, word, count):
+        yield '%04d'%int(count), word
+
+    def reducer_output_words(self, count, words):
+        for word in words:
+            yield count, word
 
 if __name__ == '__main__':
     MRWordFrequencyCount.run()
