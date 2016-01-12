@@ -3,7 +3,7 @@ from mrjob.job import MRJob
 class SpendByCustomer(MRJob):
 
     def mapper(self, _, line):
-        (customer, itme, orderAmount) = line.split(',')
+        (customer, item, orderAmount) = line.split(',')
         yield customer, float(orderAmount)
 
     def reducer(self, customer, orders):
