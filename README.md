@@ -9,6 +9,10 @@ Use python(<=2.7.10) and MRJob library
 > pip install mrjob
 ```
 
+If you are using Windows, it is recommended to use Enthought Canopy in this lecture. (it looks like IDE for python; provide editor and consoles internally)
+
+> URL: <https://www.enthought.com/products/canopy/>
+
 ### Data
 Basically, all data have been placed respectively in '/data' directory before execution.
 
