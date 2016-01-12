@@ -69,5 +69,5 @@ However, it still make some errors
 ```
 Better version
 ```console
-> python app/WordFrequencyBetter.py data/Book.txt > dist/wordcount.txt
+> python app/WordFrequencyBetter.py data/Book.txt > dist/wordcountbetter.txt
 ```
