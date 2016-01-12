@@ -23,7 +23,7 @@ In this project, we use ml-100k
 ### Run
 * Rating Counter of ml-100k data
 ```console
-> python app/RatingCounter.py ../data/ml-100k/u.data
+> python app/RatingCounter.py data/ml-100k/u.data
 ```
 
 
