@@ -2,7 +2,7 @@
 This repository for udemy lecture; Taming Big Data with MapReduce and Hadoop
 
 ## Development
-### build
+### Preparation
 Use python(<=2.7.10) and MRJob library
 * MRJob library install
 ```console
