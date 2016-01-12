@@ -12,7 +12,7 @@ pip install mrjob
 ### Data
 * [Movielens](http://grouplens.org/datasets/movielens/ "Movielens")
 
-> In this repository, we use ml-100k
+In this repository, we use ml-100k
 
 ```console
 wget http://files.grouplens.org/datasets/movielens/ml-100k.zip
