@@ -13,7 +13,10 @@ pip install mrjob
 * [Movielens](http://grouplens.org/datasets/movielens/ "Movielens")
 
 > In this repository, we use ml-100k
-> wget http://files.grouplens.org/datasets/movielens/ml-100k.zip
+
+```console
+wget http://files.grouplens.org/datasets/movielens/ml-100k.zip
+```
 
 ### Test
 * Rating Count of ml-100k data
