@@ -77,3 +77,8 @@ Using chaining step method, results are sorted by the values(frequencies)
 ```console
 > python app/WordFrequencySorted.py data/Book.txt > dist/wordcountsorted.txt
 ```
+
+* Count Order Amount by Customer (homework)
+```console
+> python app/CustomerOrderAmount.py data/customer-orders.csv > dist/customerorders.txt
+```
