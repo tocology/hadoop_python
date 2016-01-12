@@ -36,6 +36,10 @@ In this project, we use ml-100k
 
 > /data/book.txt
 
+* Order Amount by Customer data
+
+> /data/customer-orders.csv
+
 
 ### Run
 * Rating Counter with ml-100k data
