@@ -114,5 +114,5 @@ Mapping Movie's name with the results
 
 * Most Popular SuperHero
 ```console
-> python app/MostPopularMovieNicer.py --items=data/ml-100k/u.item data/ml-100k/u.data > dist/mostpopularmovienicer.txt
+> python app/MostPopularSuperHero.py --items=data/Marvel-Names.txt data/Marvel-Graph.txt > dist/mostpopularsuperhero.txt
 ```
