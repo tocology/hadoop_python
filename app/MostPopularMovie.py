@@ -20,5 +20,5 @@ class MostPopularMovie(MRJob):
         yield max(values)
         
         
-if __name__ = '__main__':
+if __name__ == '__main__':
     MostPopularMovie.run()
