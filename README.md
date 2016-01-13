@@ -101,3 +101,8 @@ Implemented with combiner
 ```console
 > python app/MostPopularMovie.py data/ml-100k/u.data > dist/mostpopularmovie.txt
 ```
+
+Mapping Movie's name with the results
+```console
+> python app/MostPopularMovieNicer.py --items=data/ml-100k/u.ITEM data/ml-100k/u.data > dist/mostpopularmovienicer.txt
+```
