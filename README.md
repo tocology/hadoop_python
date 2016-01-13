@@ -91,3 +91,8 @@ Implemented with sort
 ```console
 > python app/CustomerOrderAmountSorted.py data/customer-orders.csv > dist/customerorderssorted.txt
 ```
+
+Implemented with combiner
+```console
+> python app/CustomerOrderAmountCombiner.py data/customer-orders.csv > dist/customerorderscombiner.txt
+```
