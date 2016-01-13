@@ -116,3 +116,17 @@ Mapping Movie's name with the results
 ```console
 > python app/MostPopularSuperHero.py --names=data/Marvel-Names.txt data/Marvel-Graph.txt > dist/mostpopularsuperhero.txt
 ```
+
+* Degrees of SuperHero
+
+First, we need to make BFS of selected SuperHeroID; ex. 2548. Before execution,  'data/BFS-iteration-0.txt' file has to be created for results.
+```console
+python app/ProcessMarvel.py 2548
+```
+
+Second, we run this program again and again util getting result.
+```console
+> python app/BFSIteration.py --target=100 data/BFS-iteration-0.txt > data/BFS-iteration-1.txt
+> python app/BFSIteration.py --target=100 data/BFS-iteration-1.txt > data/BFS-iteration-2.txt
+...
+```
