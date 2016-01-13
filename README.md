@@ -96,3 +96,8 @@ Implemented with combiner
 ```console
 > python app/CustomerOrderAmountCombiner.py data/customer-orders.csv > dist/customerorderscombiner.txt
 ```
+
+* Most Popular Movie
+```console
+> python app/MostPopularMovie.py data/ml-100k/u.data > dist/mostpopularmovie.txt
+```
