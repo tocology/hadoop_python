@@ -26,19 +26,24 @@ In this project, we use ml-100k
 
 * Fake Friends data
 
-> /data/fakefriends.csv
+> data/fakefriends.csv
 
 * Weather data from the year 1800
 
-> /data/1800.csv
+> data/1800.csv
 
 * Book data
 
-> /data/book.txt
+> data/book.txt
 
 * Order Amount by Customer data
 
-> /data/customer-orders.csv
+> data/customer-orders.csv
+
+* Marvel input data
+
+> data/Marvel-Graph.txt
+> data/Marvel-Names.txt
 
 
 ### Run
@@ -104,5 +109,10 @@ Implemented with combiner
 
 Mapping Movie's name with the results
 ```console
-> python app/MostPopularMovieNicer.py --items=data/ml-100k/u.ITEM data/ml-100k/u.data > dist/mostpopularmovienicer.txt
+> python app/MostPopularMovieNicer.py --items=data/ml-100k/u.item data/ml-100k/u.data > dist/mostpopularmovienicer.txt
+```
+
+* Most Popular SuperHero
+```console
+> python app/MostPopularMovieNicer.py --items=data/ml-100k/u.item data/ml-100k/u.data > dist/mostpopularmovienicer.txt
 ```
