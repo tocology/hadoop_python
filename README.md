@@ -130,3 +130,10 @@ Second, we run this program again and again util getting result.
 > python app/BFSIteration.py --target=100 data/BFS-iteration-1.txt > data/BFS-iteration-2.txt
 ...
 ```
+
+* Finding Similar Movies
+```console
+> python app/MovieSimilarities.py --items=data/ml-100k/u.item data/ml-100k/u.data > dist/moviesimilarities.txt
+```
+This program should need 15 mins depanding on your computer spec.
+Additionally, you can know more commands; with EMR
