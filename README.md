@@ -137,3 +137,13 @@ Second, we run this program again and again util getting result.
 ```
 This program should need 15 mins depanding on your computer spec.
 Additionally, you can know more commands; with EMR
+
+If you want to run this program on EMR, command like below. it will move automatically. However, it is important that you have to set up system environment with Amazon Access and Secret keys on your OS before execution.
+```console
+python app/MovieSimilarities.py -r emr --items=data/ml-100k/u.item data/ml-100k/u.data > dist/sims.txt
+```
+
+However, it will cost more time to finished then previous one; run on your own computer locally because the only one machine moved on. So, we need more options like below. (with 4 instances)
+```console
+python app/MovieSimilarities.py -r emr  --num-ec2-instances 4 --items=data/ml-100k/u.item data/ml-100k/u.data > dist/sims-4-machines.txt
+```
