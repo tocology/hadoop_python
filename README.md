@@ -46,13 +46,13 @@ In this project, we use ml-100k
 > data/Marvel-Names.txt
 
 ### Run
-This lecture is how to make MapReduce(Mapper and Reducer) and implement real requirement like this project; Finding Movie Similarities, how much each movie has similarity with other movies.
+This lecture is dealing with how to make MapReduce(Mapper and Reducer) and implement real requirement like this project; Finding Movie Similarities, how much each movie has similarity with other movies.
 
 Before running these programs, it is recommended to test and look up some small programs described in Test section.
 
 * Finding Movie Similarities
 
-** Local **
+** On Local **
 
 ```console
 > python app/MovieSimilarities.py --items=data/ml-100k/u.item data/ml-100k/u.data > dist/moviesimilarities.txt
@@ -64,12 +64,12 @@ Additionally, you can know more commands; with EMR
 
 If you want to run this program on EMR, command like below. it will move automatically. However, it is important that you have to set up system environment with Amazon Access and Secret keys on your OS before execution.
 ```console
-python app/MovieSimilarities.py -r emr --items=data/ml-100k/u.item data/ml-100k/u.data > dist/sims.txt
+> python app/MovieSimilarities.py -r emr --items=data/ml-100k/u.item data/ml-100k/u.data > dist/sims.txt
 ```
 
 However, it will cost more time to finished then previous one; run on your own computer locally because the only one machine moved on. So, we need more options like below. (with 4 instances)
 ```console
-python app/MovieSimilarities.py -r emr  --num-ec2-instances 4 --items=data/ml-100k/u.item data/ml-100k/u.data > dist/sims-4-machines.txt
+> python app/MovieSimilarities.py -r emr  --num-ec2-instances 4 --items=data/ml-100k/u.item data/ml-100k/u.data > dist/sims-4-machines.txt
 ```
 
 ** NOTE **
@@ -80,7 +80,7 @@ And you should know that 3 machines made final result, so the each result of 3 r
 ** How to Troubleshooting **
 
 ```console
-python app/MovieSimilarities.py -r emr --num-ec2-instances 4 --items=data/ml-100k/u.ITEM data/ml-100k/u.data > simsfail.txt
+> python app/MovieSimilarities.py -r emr --num-ec2-instances 4 --items=data/ml-100k/u.ITEM data/ml-100k/u.data > simsfail.txt
 ```
 
 Looking above things, we're able to find that there is an error; u.ITEM is not same with u.item because uppercase letters are handled differently with lowercase ones except on Windows(Windows looks these two cases same).
@@ -88,7 +88,7 @@ Looking above things, we're able to find that there is an error; u.ITEM is not s
 At that time, we can get log from following command.
 
 ```console
-python -m mrjob.tools.emr.fetch_logs --find-failure j-1NXMMBNEQHAFT
+> python -m mrjob.tools.emr.fetch_logs --find-failure j-1NXMMBNEQHAFT
 ```
 
 ### Test
