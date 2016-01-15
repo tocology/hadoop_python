@@ -147,3 +147,8 @@ However, it will cost more time to finished then previous one; run on your own c
 ```console
 python app/MovieSimilarities.py -r emr  --num-ec2-instances 4 --items=data/ml-100k/u.item data/ml-100k/u.data > dist/sims-4-machines.txt
 ```
+
+** NOTE **
+
+In fact, there are not 4 machines in working. The only 3 machines(Slave) are working, but one of them is Master, so that is controlling others.
+And you should know that 3 machines made results, so the results of 3 reducers are not sorted. Finally you can see the result having 3 sections.
