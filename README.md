@@ -1,5 +1,5 @@
 # hadoop_python
-This project for udemy lecture; Taming Big Data with MapReduce and Hadoop
+This project is for a Udemy lecture; Taming Big Data with MapReduce and Hadoop
 
 ## Development
 ### Preparation
@@ -9,6 +9,10 @@ Use python(<=2.7.10) and MRJob library
 > pip install mrjob
 ```
 
+We will use that library all the time. So, if you want to get more information, please go to following site.
+
+> URL: <http://pythonhosted.org/mrjob/>
+
 If you are using Windows, it is recommended to use Enthought Canopy in this lecture. (it looks like IDE for python; provide editor and consoles internally)
 
 > URL: <https://www.enthought.com/products/canopy/>
@@ -16,12 +20,19 @@ If you are using Windows, it is recommended to use Enthought Canopy in this lect
 ### Data
 Basically, all data have been placed respectively in '/data' directory before execution.
 
+In this project, we will use data got from GroupLens. However, GroupLens data are too large to uploaded to GitHub because of data size. So, Please download from GroupLens or following below direction. Other data could be found /data dir.
+
 * [Movielens](http://grouplens.org/datasets/movielens/ "Movielens")
 
-In this project, we use ml-100k
 
 ```console
 > wget http://files.grouplens.org/datasets/movielens/ml-100k.zip
+```
+
+** Large Data **
+
+```console
+> wget http://files.grouplens.org/datasets/movielens/ml-1m.zip
 ```
 
 * Fake Friends data
@@ -62,12 +73,12 @@ Additionally, you can know more commands; with EMR
 
 ** On EMR of Amazon Web Service **
 
-If you want to run this program on EMR, command like below. it will move automatically. However, it is important that you have to set up system environment with Amazon Access and Secret keys on your OS before execution.
+If you want to run this program on EMR, command like below. it will move automatically. First of all, it is important that you have to set up system environment with Amazon Access and Secret keys on your OS before execution.
 ```console
 > python app/MovieSimilarities.py -r emr --items=data/ml-100k/u.item data/ml-100k/u.data > dist/sims.txt
 ```
 
-However, it will cost more time to finished then previous one; run on your own computer locally because the only one machine moved on. So, we need more options like below. (with 4 instances)
+However, it will take more time to be finished then previous one; running on your own computer locally is faster because the spec of your machine seems better. So, we need more options like below. (with 4 instances)
 ```console
 > python app/MovieSimilarities.py -r emr  --num-ec2-instances 4 --items=data/ml-100k/u.item data/ml-100k/u.data > dist/sims-4-machines.txt
 ```
@@ -85,11 +96,13 @@ And you should know that 3 machines made final result, so the each result of 3 r
 
 Looking above things, we're able to find that there is an error; u.ITEM is not same with u.item because uppercase letters are handled differently with lowercase ones except on Windows(Windows looks these two cases same).
 
-At that time, we can get log from following command.
+At that time, we can get log from following command. [j-1NXMMBNEQHAFT] can be changed (it is EMR Cluster ID)
 
 ```console
-> python -m mrjob.tools.emr.fetch_logs --find-failure j-1NXMMBNEQHAFT
+> python -m mrjob.tools.emr.fetch_logs --find-failure [j-1NXMMBNEQHAFT]
 ```
+
+** Scale Up for Large data **
 
 ### Test
 * Rating Counter with ml-100k data
@@ -166,7 +179,7 @@ Mapping Movie's name with the results
 
 First, we need to make BFS of selected SuperHeroID; ex. 2548. Before execution,  'data/BFS-iteration-0.txt' file has to be created for results.
 ```console
-python app/ProcessMarvel.py 2548
+> python app/ProcessMarvel.py 2548
 ```
 
 Second, we run this program again and again util getting result.
