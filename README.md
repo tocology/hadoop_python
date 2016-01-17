@@ -1,5 +1,6 @@
 # hadoop_python
 This project is for a Udemy lecture; Taming Big Data with MapReduce and Hadoop
+It will be prihiodfhoi
 
 ## Development
 ### Preparation
