@@ -65,7 +65,7 @@ Before running these programs, it is recommended to test and look up some small 
 
 * Finding Movie Similarities
 
-** On Local **
+**On Local**
 
 ```console
 > python app/MovieSimilarities.py --items=data/ml-100k/u.item data/ml-100k/u.data > dist/moviesimilarities.txt
@@ -73,7 +73,7 @@ Before running these programs, it is recommended to test and look up some small 
 This program should need 15 mins depanding on your computer spec.
 Additionally, you can know more commands; with EMR
 
-** On EMR of Amazon Web Service **
+**On EMR of Amazon Web Service**
 
 If you want to run this program on EMR, command like below. it will move automatically. First of all, it is important that you have to set up system environment with Amazon Access and Secret keys on your OS before execution.
 ```console
@@ -85,12 +85,12 @@ However, it will take more time to be finished then previous one; running on you
 > python app/MovieSimilarities.py -r emr  --num-ec2-instances 4 --items=data/ml-100k/u.item data/ml-100k/u.data > dist/sims-4-machines.txt
 ```
 
-** NOTE **
+**NOTE**
 
 In fact, there are not 4 machines in working; The only 3 machines(Slave) are working, but one of them is Master controlling others.
 And you should know that 3 machines made final result, so the each result of 3 reducers is not sorted when they are merged. So, you can see the result having 3 sections.
 
-** How to Troubleshooting **
+**How to Troubleshooting**
 
 ```console
 > python app/MovieSimilarities.py -r emr --num-ec2-instances 4 --items=data/ml-100k/u.ITEM data/ml-100k/u.data > simsfail.txt
@@ -104,7 +104,13 @@ At that time, we can get log from following command. [j-1NXMMBNEQHAFT] can be ch
 > python -m mrjob.tools.emr.fetch_logs --find-failure [j-1NXMMBNEQHAFT]
 ```
 
-** Scale Up for Large data **
+**Scale Up for Large data**
+
+We can execute this program for getting results within better time by increasing machines.
+
+```console
+python app/MovieSimilarities.py -r emr  --num-ec2-instances 20 --items=data/ml-100k/u.item data/ml-100k/u.data > dist/sims-20-machines.txt
+```
 
 ### Test
 * Rating Counter with ml-100k data
