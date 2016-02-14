@@ -196,3 +196,6 @@ Second, we run this program again and again util getting result.
 > python app/BFSIteration.py --target=100 data/BFS-iteration-1.txt > data/BFS-iteration-2.txt
 ...
 ```
+
+### Reference
+- **Udemy Lecture** : [Taming Big Data with MapReduce and Hadoop](https://www.udemy.com/taming-big-data-with-mapreduce-and-hadoop/learn/)
